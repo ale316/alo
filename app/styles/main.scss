@@ -1,31 +1,47 @@
 // bower:scss
 // endbower
 
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
-}
+$background: #222;
+$text-color: #fff;
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+body {
+  font-family: Roboto;
+  background: $background;
+  color: $text-color;
+  margin: 0; padding: 0;
+  img {
+    display: block;
   }
 }
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+#gallery {
+  height: 100%; width: auto;
+  white-space:nowrap;
+  overflow-x: hidden;
+  .gallery-thumb {
+    position: relative;
+    max-height: 100%;
+    display: inline-block;
+    img {
+      max-height: 100%;
+    }
+    .title {
+      position: absolute;
+      bottom: 100px;
+      background: black;
+      width: 100%;
+      padding: 25px 25px 25px 60px;
+      box-sizing: border-box;
+      h3 {
+        margin: 0;
+        font-size: 36px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+#test {
+  width: 100%;
+  height: 1000px;
 }
