@@ -5,7 +5,7 @@
     <title>alo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -20,35 +20,32 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    <!--
+      <div class="title">
+            <h3>Street Art</h3>
+          </div>
+    -->
+    <ul class="menu">
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Exhibitions</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
     <div class="overlay full-page">
       
     </div>
     <section id="gallery" class="full-page">
-      <div class="hider">
-        <div class="gallery-thumb">
+      <div class="slider">
+        <div class="thumb">
           <img src="images/1.jpg" alt="">
-          <div class="title">
-            <h3>Paintings</h3>
-          </div>
         </div>      
-        <div class="gallery-thumb">
+        <div class="thumb">
           <img src="images/2.jpg" alt="">
-          <div class="title">
-            <h3>Street Art</h3>
-          </div>
         </div>
-        <div class="gallery-thumb">
+        <div class="thumb">
           <img src="images/3.jpg" alt="">
-          <div class="title">
-            <h3>Saachi</h3>
-          </div>
         </div>
-        <div class="gallery-thumb">
+        <div class="thumb">
           <img src="images/4.jpg" alt="">
-          <div class="title">
-            <h3>Others</h3>
-          </div>
         </div>
       </div>
     </section>
@@ -62,36 +59,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <script>
-      var windowWidth = $(document).width();
-      var hider = $('.hider');
-      var theWidth = /*160*/ 0;
-      $('.gallery-thumb').each(function(i,g) {
-        theWidth += $(g).width();
-      });
-      $('#gallery').on('mousemove', function(e) {
-          var mousePositionX = e.clientX;
-          var delta = theWidth - windowWidth;
-          var percent = 100 / windowWidth * mousePositionX;
-          var offset = delta * percent;
-          hider.css({
-              marginLeft : -1 * delta / 100 * percent /* + 80 */
-          })
-      });
-    </script>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
